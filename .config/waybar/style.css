@@ -1,0 +1,99 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: #000000; /* Change to your preferred hex color */
+    color: #ffffff;            /* Text color */
+}
+
+/* #region Workspaces*/
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    color: #ffffff;
+    /* Ensure any default borders or shadows don't conflict */
+    border-bottom: 3px solid transparent; 
+    border-radius: 0;
+}
+
+#workspaces button.active {
+    background-color: transparent;
+    color: #ff0000; /* Accent color for text */
+    /* Creates a 3px thick underline at the bottom of the button */
+    box-shadow: inset 0 -2px #ff0000;
+}
+
+#workspaces button:hover {
+    background-color: transparent;
+    color: #ff0000; /* Accent color for text */
+}
+/* #endregion*/
+
+
+#network{
+    color: #ffffff;
+    margin: 0 10px 0 20px; 
+}
+#network:hover{
+    color: #ff0000;
+}
+
+#cpu{
+    color: #ffffff;
+    margin: 0px 0px 0 15px;
+}
+
+#temperature{
+    color: #ffffff;
+    margin: 0 15px 0 0px; 
+}
+
+#memory{
+    color: #ffffff;
+    margin: 0 15px;
+}
+
+#pulseaudio{
+    color: #ffffff;
+    margin: 0 5px;
+}
+#battery{
+    color: #ffffff;
+    margin: 0 5px;
+}
+
+#backlight {
+    color: #ffffff;
+    margin: 0 5px;
+}
+
+#backlight:hover {
+    color: #ff0000;
+}
+
+/*#region power button*/
+#custom-power {
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+#custom-power:hover {
+    color: #ff0000;
+    transition: all 0.3s ease;
+}
+/*#endregion*/
+
+#battery{
+    margin: 0 10px;
+}
+
+#custom-power_profile:hover{
+    color: #ff0000;
+}
+
+#pulseaudio:hover{
+    color: #ff0000;
+
+}
