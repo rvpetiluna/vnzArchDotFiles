@@ -1,0 +1,98 @@
+configuration{
+    display-drun: "Applications";
+    display-window: "Windows";
+    drun-display-format: "{icon} {name}";
+    font: "JetBrainsMono Nerd Font Medium 10";
+    show-icons: true;
+    modi: "window,run,drun";
+}
+
+* {
+    /* Color Variables */
+    bg-primary:          #0A0A0A;  /* Pitch black background */
+    bg-secondary:        #141414;  /* Dark grey for alternate elements */
+    accent-red:          #ff0000;  /* Vibrant crimson red accent */
+    text-light:          #FFFFFF;  /* White primary text */
+    text-muted:          #757575;  /* Muted grey for subtext */
+    
+    /* Global Styles */
+    background-color:    transparent;
+    text-color:          @text-light;
+    font:                "JetBrains Mono 11";
+}
+
+window {
+    background-color:    @bg-primary;
+    border:              2px;
+    border-color:        @accent-red;
+    border-radius:       6px;
+    width:               500px;
+    padding:             20px;
+}
+
+mainbox {
+    children:            [ inputbar, listview ];
+    spacing:             15px;
+}
+
+inputbar {
+    background-color:    @bg-secondary;
+    border-radius:       4px;
+    padding:             10px 15px;
+    children:            [ prompt, entry ];
+}
+
+prompt {
+    text-color:          @accent-red;
+    font:                "JetBrains Mono Bold 11";
+    margin:              0px 10px 0px 0px;
+}
+
+entry {
+    placeholder:         "Search...";
+    placeholder-color:   @text-muted;
+    text-color:          @text-light;
+}
+
+listview {
+    fixed-height:        true;
+    lines:               8;
+    spacing:             5px;
+    scrollbar:           false;
+}
+
+element {
+    padding:             8px 12px;
+    border-radius:       4px;
+}
+
+element normal normal, element alternate normal {
+    background-color:    transparent;
+    text-color:          @text-light;
+}
+
+element normal urgent, element alternate urgent {
+    background-color:    @bg-secondary;
+    text-color:          @accent-red;
+}
+
+/* Focused active row gets the solid red treatment */
+element selected normal {
+    background-color:    @accent-red;
+    text-color:          @bg-primary;
+}
+
+element selected normal text-color {
+    text-color:          @bg-primary;
+}
+
+element-text {
+    background-color:    transparent;
+    text-color:          inherit;
+}
+
+element-icon {
+    background-color:    transparent;
+    size:                20px;
+    margin:              0px 10px 0px 0px;
+}
